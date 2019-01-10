@@ -5,4 +5,4 @@ function double(a) {
     return a*2;
 }
 
-module.exports = sum,double;
+module.exports = {sum,double};
