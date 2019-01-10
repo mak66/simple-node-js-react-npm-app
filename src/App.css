@@ -3,8 +3,24 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 10s linear;
+  animation: App-logo-spin infinite 4s linear;
   height: 80px;
+}
+.Alt1-logo {
+  animation: App-logo-spin infinite 2s linear;
+  height: 60px;
+}
+.Alt2-logo {
+  animation: App-logo-spin infinite 1s linear;
+  height: 40px;
+}
+.Alt3-logo {
+  animation: App-logo-spin infinite 0.5s linear;
+  height: 20px;
+}
+.Alt4-logo {
+  animation: App-logo-spin infinite 0.2s linear;
+  height: 10px;
 }
 
 .App-header {
