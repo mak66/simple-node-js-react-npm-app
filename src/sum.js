@@ -5,4 +5,13 @@ function double(a) {
     return a*2;
 }
 
-module.exports = {sum,double};
+function triple(a) {
+  return a*3;
+}
+
+function Biggest(a,b){
+  if (a>b) return a;
+  return b;
+}
+
+module.exports = {sum,double,triple,Biggest};
