@@ -22,3 +22,9 @@ test('5 is bigger than 1',() => {
 test('5 is smaller than 10',() => {
   expect(sums.Biggest(5,10)).toBe(10);
 })
+test('NonZero 0,5 returns 5',() => {
+  expect(sums.NonZero(0,5)).toBe(5);
+})
+test('NonZero 1,5 returns 1',() => {
+  expect(sums.NonZero(1,5)).toBe(1);
+})
