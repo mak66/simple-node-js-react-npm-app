@@ -9,7 +9,15 @@
       "!src/index.js",
       "!src/register*.js",
       "!build/*",
-      "!build/static/js/*"]
+      "!build/static/js/*"],
+      "coverageThreshold":{
+        "global": {
+           "lines": 80,
+           "branches":90,
+           "functions": 100,
+           "statements":60
+        }
+      }
   },
   "private": true,
   "dependencies": {

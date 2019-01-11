@@ -14,4 +14,9 @@ function Biggest(a,b){
   return b;
 }
 
-module.exports = {sum,double,triple,Biggest};
+function NonZero(a,b){
+  if (a !== 0) return a;
+  return b;
+}
+
+module.exports = {sum,double,triple,Biggest,NonZero};
