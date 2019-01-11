@@ -9,7 +9,7 @@
       "!src/index.js",
       "!src/register*.js",
       "!build/*",
-      "!build/static/*"]
+      "!build/static/js/*"]
   },
   "private": true,
   "dependencies": {
