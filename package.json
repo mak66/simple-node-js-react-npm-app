@@ -7,7 +7,8 @@
       "!**/node_modules/**",
       "!**/coverage/**",
       "!src/index.js",
-      "!src/register*.js"]
+      "!src/register*.js",
+      "!build/*"]
   },
   "private": true,
   "dependencies": {
