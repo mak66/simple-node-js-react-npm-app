@@ -17,6 +17,14 @@ pipeline {
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
+                publishHTML target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: false,
+                keepAll: true,
+                reportDir: 'coverage',
+                reportFiles:'index.html',
+                reportName: 'RCov report'
+                ]
             }
         }
         stage('Deliver') {

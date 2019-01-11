@@ -10,14 +10,15 @@
       "!src/register*.js",
       "!build/*",
       "!build/static/js/*"],
-      "coverageThreshold":{
+    "coverageThreshold":{
         "global": {
            "lines": 80,
            "branches":90,
            "functions": 100,
            "statements":60
         }
-      }
+    },
+    "coverageReporters" : ["json","text","clover","html"]
   },
   "private": true,
   "dependencies": {
