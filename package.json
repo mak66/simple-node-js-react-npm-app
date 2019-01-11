@@ -8,7 +8,8 @@
       "!**/coverage/**",
       "!src/index.js",
       "!src/register*.js",
-      "!build/*"]
+      "!build/*",
+      "!build/static/*"]
   },
   "private": true,
   "dependencies": {
