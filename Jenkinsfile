@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Test Accessability') {
             steps {
-                sh 'forever npm start'
+                sh 'nohup npm start &'
                 sh 'npm run test-pa11y'
             }
         }
