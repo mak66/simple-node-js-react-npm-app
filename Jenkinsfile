@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:8-alpine'
+            image 'centos/nodejs-8-centos7'
             args '-p 3000:3000'
         }
     }
