@@ -27,7 +27,7 @@ pipeline {
                 ]
             }
         }
-        stage('Test') {
+        stage('Test Accessability') {
             steps {
                 sh 'npm start'
                 sh 'npm run test-pa11y'
