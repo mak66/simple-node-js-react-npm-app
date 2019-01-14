@@ -11,9 +11,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'which node'
-                sh 'ls -la'
-                sh 'npm install'
+                bash 'which node'
+                bash 'ls -la'
+                bash 'npm install'
             }
         }
         stage('Test') {
