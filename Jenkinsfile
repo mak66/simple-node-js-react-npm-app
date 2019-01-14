@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'uname -a'
+                sh 'which node'
                 sh 'ls -la'
                 sh 'npm install'
             }
