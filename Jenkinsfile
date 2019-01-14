@@ -30,6 +30,7 @@ pipeline {
         stage('Test Accessability') {
             steps {
                 sh 'nohup npm start &'
+                sh 'cat .pa11yci'
                 sh 'npm run test-pa11y'
             }
         }
