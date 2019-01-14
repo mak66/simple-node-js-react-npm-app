@@ -27,6 +27,12 @@ pipeline {
                 ]
             }
         }
+        stage('Test') {
+            steps {
+                sh 'npm start'
+                sh 'npm run test-pa11y'
+            }
+        }
         stage('Deliver') {
             steps {
                 sh './jenkins/scripts/deliver.sh'

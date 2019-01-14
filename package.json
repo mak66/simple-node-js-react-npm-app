@@ -9,16 +9,22 @@
       "!src/index.js",
       "!src/register*.js",
       "!build/*",
-      "!build/static/js/*"],
-    "coverageThreshold":{
-        "global": {
-           "lines": 80,
-           "branches":90,
-           "functions": 100,
-           "statements":60
-        }
+      "!build/static/js/*"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 80,
+        "branches": 90,
+        "functions": 100,
+        "statements": 60
+      }
     },
-    "coverageReporters" : ["json","text","clover","html"]
+    "coverageReporters": [
+      "json",
+      "text",
+      "clover",
+      "html"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -30,6 +36,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-pa11y": "./node_modules/.bin/pa11y-ci"
+  },
+  "devDependencies": {
+    "pa11y-ci": "^2.1.1"
   }
 }
