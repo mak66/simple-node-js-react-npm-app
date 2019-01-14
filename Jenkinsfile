@@ -11,9 +11,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bash 'which node'
-                bash 'ls -la'
-                bash 'npm install'
+                sh 'set'
+                sh 'pwd'
+                sh 'npm install'
             }
         }
         stage('Test') {
