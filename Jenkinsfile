@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh 'echo $"export PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH" >> ~/.bash_profile'
                 sh 'set'
-                sh 'pwd'
+                sh 'cat /var/jenkins_home/workspace/simple-node-js-react-npm-app@tmp/durable-dfe4c59d/script.sh'
                 sh 'npm install'
             }
         }
