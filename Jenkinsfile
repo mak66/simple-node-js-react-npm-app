@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'export PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH'
+                sh 'set'
                 sh 'pwd'
                 sh 'npm install'
             }
