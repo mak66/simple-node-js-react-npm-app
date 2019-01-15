@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'centos/nodejs-8-centos7'
+            image 'centos7node8'
             args '-p 3000:3000'
         }
     }
@@ -11,9 +11,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo $"export PATH=/opt/rh/rh-nodejs8/root/usr/bin:$PATH" >> ~/.bash_profile'
-                sh 'set'
-                sh 'cat /var/jenkins_home/workspace/simple-node-js-react-npm-app@tmp/durable-dfe4c59d/script.sh'
                 sh 'npm install'
             }
         }
