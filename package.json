@@ -38,7 +38,8 @@
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "test-pa11y": "./node_modules/.bin/pa11y-ci",
-    "lighthouse:ci": "node_modules/lighthouse/lighthouse-cli/index.js --output-path=./lighthouse/lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
+    "lighthouse:cihtml": "node_modules/lighthouse/lighthouse-cli/index.js --output-path=./lighthouse/lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
+    "lighthouse:ci": "node_modules/lighthouse/lighthouse-cli/index.js --output=json --save-assets --output-path=./lighthouse/lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
     "lighthouse:view": "node_modules/lighthouse/lighthouse-cli/index.js --view --output-path=./lighthouse/lighthouse-report.html --quiet --chrome-flags='--headless' http://localhost:3000",
     "lighthouse": "node_modules/lighthouse/lighthouse-cli/index.js --output-path=./lighthouse/lighthouse-report.html --quiet --chrome-flags='--headless' http://localhost:3000"
   },
