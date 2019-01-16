@@ -39,6 +39,7 @@ pipeline {
                 reportFiles: 'lighthouse-report.html',
                 reportName: "Lighthouse"
               ])
+              sh 'npm run test-pa11y'
               sh './jenkins/scripts/kill.sh'
             }
         }
