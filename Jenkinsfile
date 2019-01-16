@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'marktest'
+            image 'msnode7chrome:latest'
             args '-p 3000:3000'
         }
     }
