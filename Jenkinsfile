@@ -29,9 +29,17 @@ pipeline {
         }
         stage('Test Accessability') {
             steps {
-                sh 'nohup npm start &'
-                sh 'cat .pa11yci'
-                sh 'npm run test-pa11y'
+              sh './jenkins/scripts/deliver.sh'
+              sh 'npm run lighthouse:ci'
+              publishHTML (target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: false,
+                keepAll: true,
+                reportDir: './lighthouse/',
+                reportFiles: 'lighthouse-report.html',
+                reportName: "Lighthouse"
+              ])
+              sh './jenkins/scripts/kill.sh'
             }
         }
         stage('Deliver') {
