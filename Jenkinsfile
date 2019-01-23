@@ -40,7 +40,7 @@ pipeline {
                   reportDir: './lighthouse',
                   reportFiles: 'report.html',
                   reportName: "Lighthouse"
-                ])
+                ]);
                 throw
               }
               publishHTML (target: [
