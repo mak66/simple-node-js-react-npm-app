@@ -63,7 +63,6 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            sh 'mv lighthouse/report.html lighthouse/lighthouse.html'
             archiveArtifacts 'lighthouse/*.html'
             echo 'I failed :('
         }
