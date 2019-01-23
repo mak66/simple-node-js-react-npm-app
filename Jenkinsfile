@@ -54,6 +54,7 @@ pipeline {
     post {
         always {
             echo 'One way or another, I have finished'
+            archiveArtifacts 'lighthouse/*.html'
             deleteDir() /* clean up our workspace */
         }
         success {
@@ -63,7 +64,6 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
-            archiveArtifacts 'lighthouse/*.html'
             echo 'I failed :('
         }
         changed {
