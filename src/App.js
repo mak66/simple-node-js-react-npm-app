@@ -22,9 +22,10 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <form id="send first name" role="form" aria-label="Details Form">
-          First name:<br/>
-          <input type="text" name="firstname" aria-label="first_name_field"/><br/>
-          <input type="text" name="lastname" /><br/>
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" aria-label="first_name_field"/><br/>
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname"aria-label="last_name_field" /><br/><br/>
           <input type="submit" aria-label="submit button"/>
         </form>
       </div>
