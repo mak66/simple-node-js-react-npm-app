@@ -28,21 +28,10 @@ pipeline {
             }
         }
         stage('Test Accessability') {
+          try {
             steps {
               sh './jenkins/scripts/deliver.sh'
-              try {
                  sh 'npm run lighthouse:ci'
-              } catch (exc){
-                publishHTML (target: [
-                  allowMissing: false,
-                  alwaysLinkToLastBuild: false,
-                  keepAll: true,
-                  reportDir: './lighthouse',
-                  reportFiles: 'report.html',
-                  reportName: "Lighthouse"
-                ]);
-                throw exc
-              }
               publishHTML (target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
@@ -53,6 +42,17 @@ pipeline {
               ])
               sh 'npm run test-pa11y'
               sh './jenkins/scripts/kill.sh'
+              } catch (exc){
+                publishHTML (target: [
+                  allowMissing: false,
+                  alwaysLinkToLastBuild: false,
+                  keepAll: true,
+                  reportDir: './lighthouse',
+                  reportFiles: 'report.html',
+                  reportName: "Lighthouse"
+                ])
+                throw exc
+              }
             }
         }
         stage('Deliver') {
