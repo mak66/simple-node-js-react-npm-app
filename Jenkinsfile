@@ -47,6 +47,7 @@ pipeline {
             steps {
                 sh './jenkins/scripts/deliver.sh'
                 sh 'cat .pidfile'
+                sh 'ps -ef | grep npm'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'ps -ef | grep npm'
                 sh './jenkins/scripts/kill.sh'
