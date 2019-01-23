@@ -28,7 +28,6 @@ pipeline {
             }
         }
         stage('Test Accessability') {
-          try {
             steps {
               sh './jenkins/scripts/deliver.sh'
                  sh 'npm run lighthouse:ci'
@@ -42,18 +41,7 @@ pipeline {
               ])
               sh 'npm run test-pa11y'
               sh './jenkins/scripts/kill.sh'
-              } catch (exc){
-                publishHTML (target: [
-                  allowMissing: false,
-                  alwaysLinkToLastBuild: false,
-                  keepAll: true,
-                  reportDir: './lighthouse',
-                  reportFiles: 'report.html',
-                  reportName: "Lighthouse"
-                ])
-                throw exc
-              }
-            }
+           }
         }
         stage('Deliver') {
             steps {
@@ -75,6 +63,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
+            sh 'mv lighthouse/report.html lighthouse/lighthouse.html'
             archiveArtifacts 'lighthouse/*.html'
             echo 'I failed :('
         }
