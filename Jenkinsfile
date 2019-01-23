@@ -35,7 +35,7 @@ pipeline {
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
                 keepAll: true,
-                reportDir: './lighthouse/',
+                reportDir: './',
                 reportFiles: 'lighthouse-report.html',
                 reportName: "Lighthouse"
               ])
