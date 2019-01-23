@@ -30,7 +30,19 @@ pipeline {
         stage('Test Accessability') {
             steps {
               sh './jenkins/scripts/deliver.sh'
-              sh 'npm run lighthouse:ci'
+              try {
+                 sh 'npm run lighthouse:ci'
+              } catch (exc){
+                publishHTML (target: [
+                  allowMissing: false,
+                  alwaysLinkToLastBuild: false,
+                  keepAll: true,
+                  reportDir: './lighthouse',
+                  reportFiles: 'report.html',
+                  reportName: "Lighthouse"
+                ])
+                throw
+              }
               publishHTML (target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
@@ -54,7 +66,6 @@ pipeline {
     post {
         always {
             echo 'One way or another, I have finished'
-            archiveArtifacts 'lighthouse/*.html'
             deleteDir() /* clean up our workspace */
         }
         success {
@@ -64,6 +75,7 @@ pipeline {
             echo 'I am unstable :/'
         }
         failure {
+            archiveArtifacts 'lighthouse/*.html'
             echo 'I failed :('
         }
         changed {
