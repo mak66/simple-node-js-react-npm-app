@@ -60,4 +60,4 @@ typings/
 
 #test run reports
 localhost*.report.html
-lighthouse/lighthouse-report.html
+lighthouse-report.html
