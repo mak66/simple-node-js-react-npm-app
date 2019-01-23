@@ -35,8 +35,8 @@ pipeline {
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
                 keepAll: true,
-                reportDir: './',
-                reportFiles: 'lighthouse-report.html',
+                reportDir: './lighthouse',
+                reportFiles: 'report.html',
                 reportName: "Lighthouse"
               ])
               sh 'npm run test-pa11y'
