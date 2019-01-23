@@ -26,6 +26,8 @@ class App extends Component {
           <input type="text" id="firstname" name="firstname" aria-label="first_name_field"/><br/>
           <label for="lastname">Last Name:</label>
           <input type="text" id="lastname" name="lastname"aria-label="last_name_field" /><br/><br/>
+          Age:
+          <input type="text" name="age" /><br/><br/>
           <input type="submit" aria-label="submit button"/>
         </form>
       </div>

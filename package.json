@@ -38,13 +38,14 @@
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
     "test-pa11y": "./node_modules/.bin/pa11y-ci",
-    "lighthouse:ci": "node_modules/lighthouse/lighthouse-cli/index.js --output-path=./lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
+    "lighthouse:ci": "node_modules/lighthouse-ci/bin/cli --only-categories='accessibility' --only-categories='performance' --accessibility=90 --performance=80 --output-path=./lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
     "lighthouse:cijson": "node_modules/lighthouse/lighthouse-cli/index.js --output=json --save-assets --output-path=./lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000",
     "lighthouse:view": "node_modules/lighthouse/lighthouse-cli/index.js --view --output-path=./lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000 --only-categories='accessibility' --only-categories='performance'",
     "lighthouse": "node_modules/lighthouse/lighthouse-cli/index.js --view --output-path=./lighthouse-report.html --quiet --chrome-flags='--headless --no-sandbox' http://localhost:3000"
   },
   "devDependencies": {
     "lighthouse": "^4.0.0",
+    "lighthouse-ci": "^1.3.1",
     "pa11y-ci": "^2.1.1",
     "pa11y-reporter-html": "^1.0.0"
   }
