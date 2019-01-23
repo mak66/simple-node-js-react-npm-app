@@ -41,7 +41,7 @@ pipeline {
                   reportFiles: 'report.html',
                   reportName: "Lighthouse"
                 ]);
-                throw
+                throw exc
               }
               publishHTML (target: [
                 allowMissing: false,
