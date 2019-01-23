@@ -21,9 +21,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <form id="send first name" aria-label="Enter your first name">
+        <form id="send first name" role="form" aria-label="Details Form">
           First name:<br/>
-          <input type="text" name="firstname" aria-label="firstname_field"/><br/>
+          <input type="text" name="firstname" aria-label="first_name_field"/><br/>
+          <input type="text" name="lastname" /><br/>
           <input type="submit" aria-label="submit button"/>
         </form>
       </div>
